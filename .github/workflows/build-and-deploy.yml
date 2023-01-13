@@ -32,13 +32,11 @@ jobs:
           expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - run: expo -h
-
       - name: 📦 Install dependencies
         run: npm install
 
       - name: 🚀 Publish app
-        run: expo export:web
+        run: expo build:web web-build
         
       - run: ls -al
       - run: ls -al web-build
