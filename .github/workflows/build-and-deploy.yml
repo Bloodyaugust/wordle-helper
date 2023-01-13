@@ -36,7 +36,7 @@ jobs:
         run: npm install
 
       - name: 🚀 Publish app
-        run: expo build:web web-build
+        run: expo build:web
         
       - run: ls -al
       - run: ls -al web-build
